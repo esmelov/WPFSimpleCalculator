@@ -1,6 +1,0 @@
-d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.Core\bin\Debug\Calculator.Core.dll
-d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.Core\bin\Debug\Calculator.Core.pdb
-d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.Core\obj\Debug\Calculator.Core.csproj.CoreCompileInputs.cache
-d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.Core\obj\Debug\Calculator.Core.dll
-d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.Core\obj\Debug\Calculator.Core.pdb
-d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.Core\obj\Debug\Calculator.Core.csprojResolveAssemblyReference.cache
