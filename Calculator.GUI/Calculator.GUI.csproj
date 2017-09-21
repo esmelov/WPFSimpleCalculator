@@ -63,6 +63,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="Converters\ActionsConverter.cs" />
     <Compile Include="ViewModel\CalculatorViewModel.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -95,12 +96,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Data\Images\plus.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Calculator.Core\Calculator.Core.csproj">
       <Project>{46969144-e1bb-4bf0-864a-2ddefd6d61f7}</Project>
       <Name>Calculator.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\Images\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\Images\multiplication.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\Images\division.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

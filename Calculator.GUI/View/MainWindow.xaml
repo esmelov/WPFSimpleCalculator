@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:e="clr-namespace:Calculator.Core.Enum;assembly=Calculator.Core"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dataConverter="clr-namespace:Calculator.GUI.Converters"
         mc:Ignorable="d"
-        Title="SimpleCalculator" Height="350" Width="250" ResizeMode="NoResize">
+        Title="SimpleCalculator" Height="450" Width="350" ResizeMode="NoResize">
+    <Window.Resources>
+        <dataConverter:ActionsConverter x:Key="ActionToImage"/>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -29,10 +33,24 @@
                     VerticalAlignment="Center">
             <TextBox VerticalAlignment="Center"
                      BorderThickness="0"
-                     Text="{Binding Buffer, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
-            <TextBox HorizontalContentAlignment="Right"
-                     BorderThickness="0"
-                     Text="{Binding InnerBuffer, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" IsReadOnly="True"/>
+                     FontSize="20"
+                     Text="{Binding InnerBuffer, UpdateSourceTrigger=PropertyChanged, Mode=OneWay, FallbackValue=0}" 
+                     IsReadOnly="True"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0"
+                       Source="{Binding CurrentAction, Converter={StaticResource ActionToImage}}"
+                       Height="27"></Image>
+                <TextBox Grid.Column="1"
+                         HorizontalContentAlignment="Right"
+                         FontSize="20"
+                         BorderThickness="0"
+                         Text="{Binding Buffer, UpdateSourceTrigger=PropertyChanged, FallbackValue=0}"
+                         IsReadOnly="True"/>
+            </Grid>
         </StackPanel>
         <Button Grid.Column="0"
                 Grid.Row="5"

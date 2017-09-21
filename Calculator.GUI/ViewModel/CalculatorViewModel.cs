@@ -12,6 +12,9 @@ namespace Calculator.GUI.ModelView
         private ICalculator _calculatorModel;
         private String _buffer;
         private Boolean _error;
+
+        #region Command
+
         private RelayCommand _changeValue;
         private RelayCommand _choiseAction;
         private RelayCommand _clear;
@@ -61,6 +64,7 @@ namespace Calculator.GUI.ModelView
                                 _calculatorModel.ChangeAction(Convert.ToDecimal(Buffer), curAct);
                                 Buffer = "0";
                                 OnPropertyChanged("InnerBuffer");
+                                OnPropertyChanged("CurrentAction");
                             }
                             catch
                             {
@@ -100,6 +104,7 @@ namespace Calculator.GUI.ModelView
                             Buffer = _calculatorModel.Buffer.ToString();
                             _calculatorModel.Clear();
                             OnPropertyChanged("InnerBuffer");
+                            OnPropertyChanged("CurrentAction");
                         }
                         catch
                         {
@@ -130,6 +135,8 @@ namespace Calculator.GUI.ModelView
             }
         }
 
+        #endregion
+
         public String Buffer
         {
             get
@@ -150,6 +157,14 @@ namespace Calculator.GUI.ModelView
             get
             {
                 return _calculatorModel.Buffer.ToString();
+            }
+        }
+
+        public Operations CurrentAction
+        {
+            get
+            {
+                return _calculatorModel.CurrentAction;
             }
         }
 
