@@ -1,6 +1,5 @@
 ﻿using Calculator.Core.Enum;
 using Calculator.Core.Interfaces;
-using Calculator.Core.Factory;
 using System;
 
 namespace Calculator.Core.Concrete
@@ -12,8 +11,7 @@ namespace Calculator.Core.Concrete
 
         public Calculator()
         {
-            Buffer = 0;
-            CurrentAction = Operations.Adition;
+            Clear();
         }
 
         public void Calculate(Decimal currentNumber)

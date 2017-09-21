@@ -41,12 +41,7 @@ namespace Calculator.GUI.ModelView
                     {
                         if (Buffer != "0" && !_error)
                         {
-                            if (!Buffer.StartsWith("-"))
-                            {
-                                Buffer = "-" + Buffer;
-                            }
-                            else
-                                Buffer = Buffer.TrimStart('-');
+                            Buffer = Buffer.StartsWith("-") ? Buffer.TrimStart('-') : ("-" + Buffer);
                         }
                     }));
             }
@@ -143,9 +138,9 @@ namespace Calculator.GUI.ModelView
             }
             set
             {
-                if (value.Length > 1)
-                    value = value.TrimStart('0');
-                _buffer = value == "" ? "0" : value;
+                _buffer = value;
+                _buffer = (_buffer.Length > 1) ? _buffer.TrimStart('0') : _buffer;
+                _buffer = _buffer == "" ? "0" : _buffer;
                 OnPropertyChanged();
             }
         }

@@ -3,7 +3,7 @@ using Calculator.Core.Enum;
 using Calculator.Core.Interfaces;
 using System;
 
-namespace Calculator.Core.Factory
+namespace Calculator.Core.Concrete
 {
     internal static class CalculationFactory
     {

@@ -46,7 +46,7 @@
     <Compile Include="Concrete\Calculation\Subtraction.cs" />
     <Compile Include="Concrete\Calculator.cs" />
     <Compile Include="Enum\Operations.cs" />
-    <Compile Include="Factory\CalculationFactory.cs" />
+    <Compile Include="Concrete\CalculationFactory.cs" />
     <Compile Include="Interfaces\ICalculation.cs" />
     <Compile Include="Interfaces\ICalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

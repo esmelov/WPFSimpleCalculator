@@ -34,7 +34,6 @@
                      BorderThickness="0"
                      Text="{Binding InnerBuffer, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" IsReadOnly="True"/>
         </StackPanel>
-        <!--<TextBox Grid.Row="0" Grid.ColumnSpan="4" Text="{Binding Buffer, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" IsReadOnly="True" />-->
         <Button Grid.Column="0"
                 Grid.Row="5"
                 Margin="5"

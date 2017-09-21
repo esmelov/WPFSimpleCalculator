@@ -1,0 +1,16 @@
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\bin\Debug\Calculator.GUI.exe.config
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\bin\Debug\Calculator.GUI.exe
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\bin\Debug\Calculator.GUI.pdb
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\bin\Debug\Calculator.Core.dll
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\bin\Debug\Calculator.Core.pdb
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\obj\Debug\Calculator.GUI.csprojResolveAssemblyReference.cache
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\obj\Debug\View\MainWindow.baml
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\obj\Debug\View\MainWindow.g.cs
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\obj\Debug\App.g.cs
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\obj\Debug\Calculator.GUI_MarkupCompile.cache
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\obj\Debug\Calculator.GUI.g.resources
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\obj\Debug\Calculator.GUI.Properties.Resources.resources
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\obj\Debug\Calculator.GUI.csproj.GenerateResource.Cache
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\obj\Debug\Calculator.GUI.csproj.CoreCompileInputs.cache
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\obj\Debug\Calculator.GUI.exe
+d:\pers\Documents\Visual Studio 2017\Projects\SimpleCalculator\Calculator.GUI\obj\Debug\Calculator.GUI.pdb
