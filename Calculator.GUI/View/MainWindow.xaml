@@ -4,146 +4,31 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:e="clr-namespace:Calculator.Core.Enum;assembly=Calculator.Core"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:dataConverter="clr-namespace:Calculator.GUI.Converters"
         mc:Ignorable="d"
         Title="SimpleCalculator" Height="450" Width="350" ResizeMode="NoResize">
-    <Window.Resources>
-        <dataConverter:ActionsConverter x:Key="ActionToImage"/>
-    </Window.Resources>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Column="0"
-                    Grid.Row="0"
-                    Grid.ColumnSpan="4"
-                    Orientation="Vertical"
-                    Margin="5"
-                    VerticalAlignment="Center">
-            <TextBox VerticalAlignment="Center"
-                     BorderThickness="0"
-                     FontSize="20"
-                     Text="{Binding InnerBuffer, UpdateSourceTrigger=PropertyChanged, Mode=OneWay, FallbackValue=0}" 
-                     IsReadOnly="True"/>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Image Grid.Column="0"
-                       Source="{Binding CurrentAction, Converter={StaticResource ActionToImage}}"
-                       Height="27"></Image>
-                <TextBox Grid.Column="1"
-                         HorizontalContentAlignment="Right"
-                         FontSize="20"
-                         BorderThickness="0"
-                         Text="{Binding Buffer, UpdateSourceTrigger=PropertyChanged, FallbackValue=0}"
-                         IsReadOnly="True"/>
-            </Grid>
-        </StackPanel>
-        <Button Grid.Column="0"
-                Grid.Row="5"
-                Margin="5"
-                Command="{Binding ChangeSign}">+/-</Button>
-        <Button Grid.Column="1"
-                Grid.Row="5"
-                Margin="5"
-                Command="{Binding ChangeValue, UpdateSourceTrigger=PropertyChanged}"
-                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}">0</Button>
-        <Button Grid.Column="2"
-                Grid.Row="5"
-                Margin="5"
-                Command="{Binding ChangeValue}"
-                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}">,</Button>
-        <Button Grid.Column="3"
-                Grid.Row="4"
-                Grid.RowSpan="2"
-                Margin="5"
-                Command="{Binding Calculate}">=</Button>
-        <Button Grid.Column="0"
-                Grid.Row="4"
-                Margin="5"
-                Command="{Binding ChangeValue, UpdateSourceTrigger=PropertyChanged}"
-                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}">1</Button>
-        <Button Grid.Column="1"
-                Grid.Row="4"
-                Margin="5"
-                Command="{Binding ChangeValue}"
-                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}">2</Button>
-        <Button Grid.Column="2"
-                Grid.Row="4"
-                Margin="5"
-                Command="{Binding ChangeValue}"
-                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}">3</Button>
-        <Button Grid.Column="0"
-                Grid.Row="3"
-                Margin="5"
-                Command="{Binding ChangeValue}"
-                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}">4</Button>
-        <Button Grid.Column="1"
-                Grid.Row="3"
-                Margin="5"
-                Command="{Binding ChangeValue}"
-                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}">5</Button>
-        <Button Grid.Column="2"
-                Grid.Row="3"
-                Margin="5"
-                Command="{Binding ChangeValue}"
-                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}">6</Button>
-        <Button Grid.Column="3"
-                Grid.Row="3"
-                Margin="5"
-                Command="{Binding ChoiceAction}"
-                CommandParameter="{x:Static e:Operations.Adition}">+</Button>
-        <Button Grid.Column="0"
-                Grid.Row="2"
-                Margin="5"
-                Command="{Binding ChangeValue}"
-                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}">7</Button>
-        <Button Grid.Column="1"
-                Grid.Row="2"
-                Margin="5"
-                Command="{Binding ChangeValue}"
-                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}">8</Button>
-        <Button Grid.Column="2"
-                Grid.Row="2"
-                Margin="5"
-                Command="{Binding ChangeValue}"
-                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}">9</Button>
-        <Button Grid.Column="0"
-                Grid.Row="1"
-                Margin="5"
-                Command="{Binding Clear}">C</Button>
-        <Button Grid.Column="1"
-                Grid.Row="1"
-                Margin="5"
-                Command="{Binding TrimLastChar}"
-                Content="&lt;" />
-        <Button Grid.Column="3"
-                Grid.Row="1"
-                Margin="5"
-                Command="{Binding ChoiceAction}"
-                CommandParameter="{x:Static e:Operations.Division}">/</Button>
-        <Button Grid.Column="2"
-                Grid.Row="1"
-                Margin="5"
-                Command="{Binding ChoiceAction}"
-                CommandParameter="{x:Static e:Operations.Multiplication}">*</Button>
-        <Button Grid.Column="3"
-                Grid.Row="2"
-                Margin="5"
-                Command="{Binding ChoiceAction}"
-                CommandParameter="{x:Static e:Operations.Subtraction}">-</Button>
+        <Border Grid.Row="0"
+                CornerRadius="5"
+                BorderBrush="Black"
+                BorderThickness="1"
+                Margin="3"
+                Padding="5">
+            <Frame Source="Pages/Face.xaml"
+                   Navigated="Frame_Navigated"/>
+        </Border>
+
+        <Border Grid.Row="1"
+                CornerRadius="5"
+                BorderBrush="Black"
+                BorderThickness="1"
+                Margin="3"
+                Padding="5">
+            <Frame Source="Pages/Buttons.xaml"
+                   Navigated="Frame_Navigated" />
+        </Border>
     </Grid>
 </Window>

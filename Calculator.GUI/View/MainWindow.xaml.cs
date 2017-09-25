@@ -26,5 +26,13 @@ namespace Calculator.GUI
             InitializeComponent();
             DataContext = new CalculatorViewModel(new Core.Concrete.Calculator());
         }
+
+        private void Frame_Navigated(object sender, NavigationEventArgs e)
+        {            
+            if (e.Content is Page CurPage)
+            {
+                CurPage.DataContext = this.DataContext;
+            }
+        }
     }
 }

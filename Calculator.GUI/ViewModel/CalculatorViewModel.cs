@@ -87,6 +87,7 @@ namespace Calculator.GUI.ModelView
                         Buffer = "0";
                         _error = false;
                         OnPropertyChanged("InnerBuffer");
+                        OnPropertyChanged("CurrentAction");
                     }));
             }
         }

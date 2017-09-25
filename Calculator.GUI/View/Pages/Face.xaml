@@ -1,0 +1,40 @@
+﻿<Page x:Class="Calculator.GUI.Pages.Face"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Calculator.GUI.Pages"
+      xmlns:dataConverter="clr-namespace:Calculator.GUI.Converters"
+      mc:Ignorable="d" 
+      Title="Face">
+    <Page.Resources>
+        <dataConverter:ImageActionConverter x:Key="ActionToImage" />
+        <dataConverter:BrushActionConverter x:Key="ActionToBrush" />
+    </Page.Resources>
+    <StackPanel Orientation="Vertical">
+        <TextBox BorderThickness="0"
+                 FontSize="20"
+                 Text="{Binding InnerBuffer, UpdateSourceTrigger=PropertyChanged, Mode=OneWay, FallbackValue=0}" 
+                 IsReadOnly="True"
+                 />
+        <Grid VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0"
+                   Source="{Binding CurrentAction, Converter={StaticResource ResourceKey=ActionToImage}}"
+                   Height="30"
+                   Margin="0 1 0 0"
+                   />
+            <TextBox Grid.Column="1"
+                     HorizontalContentAlignment="Right"
+                     FontSize="20"
+                     BorderBrush="{Binding CurrentAction, Converter={StaticResource ResourceKey=ActionToBrush}}"
+                     BorderThickness="0 1 1 1"
+                     Text="{Binding Buffer, UpdateSourceTrigger=PropertyChanged, FallbackValue=0}"
+                     IsReadOnly="True"
+                     />
+        </Grid>
+    </StackPanel>
+</Page>

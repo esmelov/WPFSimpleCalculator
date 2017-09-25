@@ -2,17 +2,16 @@
 using System;
 using System.Globalization;
 using System.Windows.Data;
-using System.Windows.Media.Imaging;
+using System.Windows.Media;
 
 namespace Calculator.GUI.Converters
 {
-    [ValueConversion(typeof(Operations),typeof(BitmapImage))]
-    public class ActionsConverter : IValueConverter
+    [ValueConversion(typeof(Operations), typeof(SolidColorBrush))]
+    public class BrushActionConverter : IValueConverter
     {
-        String _path = "pack://application:,,,/";
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            BitmapImage tempImage = new BitmapImage();
+            SolidColorBrush tmpBrush = new SolidColorBrush();
             if (value is Operations curOperation)
             {
                 try
@@ -20,25 +19,22 @@ namespace Calculator.GUI.Converters
                     switch (curOperation)
                     {
                         case Operations.Adition:
-                            tempImage = new BitmapImage(new Uri(_path + "Data/Images/plus.png"));
+                            tmpBrush = new SolidColorBrush(Color.FromRgb(128, 178, 45));
                             break;
                         case Operations.Subtraction:
-                            tempImage = new BitmapImage(new Uri(_path + "Data/Images/minus.png"));
+                            tmpBrush = new SolidColorBrush(Color.FromRgb(255, 39, 0));
                             break;
                         case Operations.Multiplication:
-                            tempImage = new BitmapImage(new Uri(_path + "Data/Images/multiplication.png"));
+                            tmpBrush = new SolidColorBrush(Color.FromRgb(8, 177, 200));
                             break;
                         case Operations.Division:
-                            tempImage = new BitmapImage(new Uri(_path + "Data/Images/division.png"));
+                            tmpBrush = new SolidColorBrush(Color.FromRgb(253, 229, 0));
                             break;
                     }
                 }
-                catch (Exception ex)
-                {
-
-                }
+                catch { }
             }
-            return tempImage;
+            return tmpBrush;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
