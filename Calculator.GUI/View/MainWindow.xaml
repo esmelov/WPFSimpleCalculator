@@ -16,19 +16,26 @@
                 BorderBrush="Black"
                 BorderThickness="1"
                 Margin="3"
-                Padding="5">
+                Padding="5"
+                Background="White">
             <Frame Source="Pages/Face.xaml"
                    Navigated="Frame_Navigated"/>
+            <Border.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" ShadowDepth="5" Softness=".3" />
+            </Border.BitmapEffect>
         </Border>
-
         <Border Grid.Row="1"
                 CornerRadius="5"
                 BorderBrush="Black"
                 BorderThickness="1"
                 Margin="3"
-                Padding="5">
+                Padding="5"
+                Background="White">
             <Frame Source="Pages/Buttons.xaml"
                    Navigated="Frame_Navigated" />
+            <Border.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" ShadowDepth="3" Softness=".3" />
+            </Border.BitmapEffect>
         </Border>
     </Grid>
 </Window>
